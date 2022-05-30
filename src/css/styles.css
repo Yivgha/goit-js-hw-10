@@ -19,7 +19,6 @@ body {
   margin-bottom: 16px;
 }
 .img {
-
   width: 55px;
   height: 35px;
   margin-right: 10px;
@@ -59,7 +58,7 @@ p {
 }
 
 .country_list-name {
-  font-size: 20;
+  font-size: 25;
   font-weight: 400;
   margin-left: 10px;
 }
