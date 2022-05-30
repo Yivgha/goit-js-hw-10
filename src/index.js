@@ -1,6 +1,7 @@
 import "./css/styles.css";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
-import {fetchCountryByName} from "./fetchCountries.js"
+import { fetchCountryByName } from "./fetchCountries.js";
+import debounce from 'lodash.throttle';
 
 const DEBOUNCE_DELAY = 300;
 
@@ -29,7 +30,7 @@ function onInput() {
 function renderMarkup(data) {
   let markup = {};
   if (data.length > 10) {
-    return Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
+    return Notify.info('Too many matches found. Please enter a more specific name.');
   }
   if ((data.length > 2) & (data.length < 10)) {
     markup = data
