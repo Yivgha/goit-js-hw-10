@@ -32,7 +32,7 @@ function renderMarkup(data) {
   if (data.length > 10) {
     return Notify.info('Too many matches found. Please enter a more specific name.');
   }
-  if ((data.length > 2) & (data.length < 10)) {
+  if ((data.length >= 2) & (data.length <= 10)) {
     markup = data
       .map(data => {
         return `<li class ="list">  <img  src="${data.flags.svg}" alt="flag" class="img" > <p> ${data.name.official}  </p> </li>
